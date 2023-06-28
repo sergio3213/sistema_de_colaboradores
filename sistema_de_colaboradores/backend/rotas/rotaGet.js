@@ -1,10 +1,6 @@
 import express from "express";
 const routerGet = express.Router();
-    
-routerGet.get("/cadastroUsuario", (req,res)=>{
-    res.status(200).json({
-        'message':'rota em funcionamento'
-    })
-});
+import controllerCadastraUsuarios from "../controllers/controllerCadastraUsuario.js";
+routerGet.get("/cadastrarUsuario", controllerCadastraUsuarios);
 
 export default routerGet
