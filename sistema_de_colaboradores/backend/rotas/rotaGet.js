@@ -1,6 +1,7 @@
 import express from "express";
 const routerGet = express.Router();
-import controllerCadastraUsuarios from "../controllers/controllerCadastraUsuario.js";
-routerGet.get("/cadastrarUsuario", controllerCadastraUsuarios);
+import controllerLogin from "../controllers/controllerLogin.js";
+routerGet.get("/login", controllerLogin);
+
 
 export default routerGet

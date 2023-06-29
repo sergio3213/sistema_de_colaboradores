@@ -26,6 +26,15 @@ class meuCrud {
     );
       return(usuariosPorUsuario[0])
   }
+
+  async buscarUsuarioPorUsuarioEsenha(usuario,senha) {
+    const esperaConexao = await this.conexao()
+    const usuariosPorUsuarioEsenha = await esperaConexao.execute(
+      `SELECT * FROM usuarios WHERE usuario = ? and senha = ? `,
+      [usuario,senha]
+    );
+      return(usuariosPorUsuarioEsenha[0])
+  }
 }
 
 export default meuCrud;

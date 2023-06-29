@@ -29,10 +29,10 @@ function CadastroDeUsuario() {
         tipo:inputTipo
     })
     .then((data)=>{
-
+      alert("Usuário cadastrado com sucesso!")
     })
     .catch((err)=>{
-        console.log(err)
+        alert(err.response.data.message)
     })
   }
 
